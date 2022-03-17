@@ -29,8 +29,8 @@ private readonly apiUrl = 'http://localhost:8080';
     catchError(this.handleError)
   );
 
-   ping$ =(ipAddress: String)=><Observable <CustomResponse> >
-  this.http.get<CustomResponse>(`${this.apiUrl}/server/ping${ipAddress}`)
+   ping$ =(ipAddress: string)=><Observable <CustomResponse> >
+  this.http.get<CustomResponse>(`${this.apiUrl}/server/ping/${ipAddress}`)
   .pipe(
     tap(console.log),
     catchError(this.handleError)

@@ -5,6 +5,6 @@ export interface AppState<T>{
 
     dataState: DataState;
 appData?: T;
-error?: String;
+error?: string;
     
 }
